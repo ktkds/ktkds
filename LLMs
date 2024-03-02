@@ -1,0 +1,42 @@
+from langchain.llms import OpenAI
+import os
+os.environ["OPENAI_API_KEY"] = "my-openai-key"
+
+llm = OpenAI(model="gpt-3.5-turbo-instruct", temperature=0.9)
+text = "Suggest a personalized workout routine for someone looking to improve cardiovascular endurance and prefers outdoor activities."
+print(llm(text))
+
+// Output //
+
+Monday:
+Warm-up: 10 minutes jog
+Main workout: 30 minutes of cycling or mountain biking
+Cool down: 10 minutes walk
+
+Tuesday:
+Warm-up: 10 minutes jump rope
+Main workout: 30 minutes of hiking or trail running
+Cool down: 10 minutes yoga/stretching
+
+Wednesday:
+Rest day or light activity such as swimming or walking
+
+Thursday:
+Warm-up: 10 minutes jog
+Main workout: 45 minutes of outdoor group fitness class (i.e. bootcamp, high intensity interval training)
+Cool down: 10 minutes walk
+
+Friday:
+Warm-up: 10 minutes jump rope
+Main workout: 30 minutes of outdoor circuit training (i.e. bodyweight exercises, sprints)
+Cool down: 10 minutes yoga/stretching
+
+Saturday:
+Warm-up: 10 minutes jog
+Main workout: 45 minutes of outdoor sports (i.e. soccer, basketball, tennis)
+Cool down: 10 minutes walk
+
+Sunday:
+Rest day or light activity such as yoga or leisurely bike ride.
+
+Note: It is important to incorporate variety into your workouts, so feel free to mix and match activities depending on your preferences and what is available in your area. Remember to always listen to your body and adjust the intensity
