@@ -1,0 +1,20 @@
+from langchain.llms import OpenAI
+from langchain.chains import ConversationChain
+from langchain.memory import ConversationBufferMemory
+
+llm = OpenAI(model="gpt-3.5-turbo-instruct", temperature=0)
+conversation = ConversationChain(
+    llm=llm,
+    verbose=True,
+    memory=ConversationBufferMemory()
+)
+
+# Start the conversation
+conversation.predict(input="What is your job profile.")
+
+# Continue the conversation
+conversation.predict(input="How proficient are you in AI?")
+conversation.predict(input="How can you help me with RAG?")
+
+# Display the conversation
+print(conversation)
